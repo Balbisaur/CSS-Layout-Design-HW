@@ -1,0 +1,56 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    min-height: 100vh;
+  }
+
+  header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    background-image: url("https://t4.ftcdn.net/jpg/07/92/24/43/360_F_792244301_gScf6duAjOpi0YHkzhMbCXIxL95f95n9.jpg");
+  }
+
+  .content {
+    grid-area: content;
+    padding: 2rem;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f1f1f1;
+    padding: 2rem;
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-areas:
+        "header header"
+        "content sidebar"
+        "footer footer";
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: auto 1fr auto;
+    }
+  }
